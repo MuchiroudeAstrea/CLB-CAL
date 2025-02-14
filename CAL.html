@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLB Truyền thông CAL</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background: #222;
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      nav ul li {
+        display: inline;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .hero {
+        background: url("hero.jpg") center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+      }
+      .clb-section,
+      .events {
+        text-align: center;
+        padding: 40px 20px;
+      }
+      .clb-grid,
+      .event-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .clb-item,
+      .event-item {
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 250px;
+      }
+      .clb-item img,
+      .event-item img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+      .dark-mode {
+        background-color: #121212;
+        color: rgb(129, 73, 73);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #dark-mode-toggle {
+        position: fixed;
+        top: 30px;
+        left: 20px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        background-color: #6b30b0;
+        border: none; /* Bỏ viền mặc định */
+        border-radius: 5px; /* Bo góc */
+      }
+      #dark-mode-toggle:hover {
+        background-color: #e08c0d !important; /* Màu nền khi di chuột */
+        transform: scale(1.05); /* Phóng to nút một chút */
+      }
+    </style>
+  </head>
+  <body>
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">✨</button>
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        let button = document.getElementById("dark-mode-toggle");
+
+        if (document.body.classList.contains("dark-mode")) {
+          button.innerText = "☀️";
+          button.style.color = "#6ca0e0";
+        } else {
+          button.innerText = "✨";
+          button.style.backgroundColor = "#6b30b0";
+        }
+      }
+    </script>
+    <header>
+      <nav>
+        <h1>CAL MEDIA CLUB</h1>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Sự kiện</a></li>
+          <li><a href="#">CLB</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>CLB Truyền thông CAL</h2>
+        <p>Nơi sáng tạo, kết nối và lan tỏa giá trị thông tin!</p>
+      </div>
+    </section>
+    <section class="clb-section">
+      <h2>CLB năng động</h2>
+      <div class="clb-grid">
+        <div class="clb-item">
+          <img src="multimedia.jpg" alt="Multimedia" />
+          <h3>Multimedia</h3>
+          <p>CLB sáng tạo nội dung đa phương tiện.</p>
+        </div>
+        <div class="clb-item">
+          <img src="volunteer.jpg" alt="Tình nguyện" />
+          <h3>Tình nguyện</h3>
+          <p>Hoạt động vì cộng đồng và thiện nguyện.</p>
+        </div>
+        <div class="clb-item">
+          <img src="photography.jpg" alt="Nhiếp ảnh" />
+          <h3>Nhiếp ảnh</h3>
+          <p>Ghi lại những khoảnh khắc đẹp bằng nghệ thuật nhiếp ảnh.</p>
+        </div>
+      </div>
+    </section>
+    <section class="events">
+      <h2>Sự kiện sắp diễn ra</h2>
+      <div class="event-grid">
+        <div class="event-item">
+          <img src="event1.jpg" alt="Sự kiện 1" />
+          <h3>Workshop Kỹ năng truyền thông</h3>
+          <p>Thời gian: 10/02/2025 - 9:00 AM</p>
+        </div>
+        <div class="event-item">
+          <img src="event2.jpg" alt="Sự kiện 2" />
+          <h3>Talkshow "Truyền thông hiện đại"</h3>
+          <p>Thời gian: 20/02/2025 - 3:00 PM</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 CLB Truyền thông CAL - THPT Mông Dương</p>
+    </footer>
+  </body>
+</html>

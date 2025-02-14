@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>CLB Truyền thông CAL</title>
+    <meta name="keywords" content="CAL" />
+    <meta name="description" content="CLB Truyền thông CAL - THPT Mông Dương" />
+    <meta name="author" content="templatemo" />
+    <!-- 
+	Medigo Template
+	http://www.templatemo.com/preview/templatemo_460_medigo
+    -->
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/misc.css" />
+    <link rel="stylesheet" href="css/orange-scheme.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Qwigley&display=swap");
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+        background: #f5f5dc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .splash-panel {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background: #f5f5dc;
+      }
+      #splash-left {
+        left: -50%;
+        animation: slideInLeft 1s forwards;
+      }
+      #splash-right {
+        right: -50%;
+        animation: slideInRight 1s forwards;
+      }
+      @keyframes slideInLeft {
+        to {
+          left: 0;
+        }
+      }
+      @keyframes slideInRight {
+        to {
+          right: 0;
+        }
+      }
+      .content {
+        position: absolute;
+        text-align: center;
+        font-size: 100px;
+
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      .line1 {
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      .line2 {
+        font-size: 60px;
+        margin-top: 10px;
+      }
+      .fade-out {
+        animation: fadeOut 1s forwards;
+      }
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+      }
+      .petal {
+        position: absolute;
+        width: 70px;
+        height: auto;
+        opacity: 0.9;
+        animation: fall linear infinite;
+      }
+      @keyframes fall {
+        from {
+          transform: translateY(-10vh) translateX(0) rotate(0deg);
+        }
+        to {
+          transform: translateY(100vh) translateX(30px) rotate(360deg);
+        }
+      }
+    </style>
+    <!-- JavaScripts -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/jpg" />
+  </head>
+  <body>
+    <div id="splash-screen">
+      <div id="splash-left" class="splash-panel"></div>
+      <div id="splash-right" class="splash-panel"></div>
+      <div class="content" style="font-family: Qwigley; font-size: larger">
+        <div class="line1">Chào mừng bạn đến với CLB Truyền Thông - CAL</div>
+        <div class="line2">Năng Động - Tích Cực - Đổi mới</div>
+      </div>
+    </div>
+
+    <script>
+      function createPetal() {
+        const petal = document.createElement("img");
+        petal.src = "https://e7.pngegg.com/pngimages/426/202/png-clipart-pink-rose-petal-floating-material-pink-roses-thumbnail.png";
+        petal.classList.add("petal");
+        petal.style.left = Math.random() * 100 + "vw";
+        petal.style.animationDuration = Math.random() * 4 + 2 + "s";
+        document.getElementById("splash-screen").appendChild(petal);
+        setTimeout(() => {
+          petal.remove();
+        }, 5000);
+      }
+      setInterval(createPetal, 300);
+
+      setTimeout(() => {
+        document.getElementById("splash-left").style.left = "-50%";
+        document.getElementById("splash-right").style.right = "-50%";
+      }, 1000);
+
+      setTimeout(() => {
+        document.querySelector(".content").style.opacity = "1";
+      }, 2500);
+
+      setTimeout(() => {
+        document.querySelector(".content").classList.add("fade-out");
+      }, 5000);
+
+      setTimeout(() => {
+        document.getElementById("splash-screen").style.display = "none";
+      }, 6000);
+    </script>
+
+    <div class="responsive_menu">
+      <ul class="main_menu">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li>
+          <a href="#">Lịch Sử Thành Lập</a>
+          <ul>
+            <li><a href="portfolio.html">Lịch Sử Thành Lập</a></li>
+            <li><a href="project-image.html">Chức Vụ</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Thành Viên</a>
+          <ul>
+            <li>
+              <a
+                href="https://scontent.fhph1-1.fna.fbcdn.net/v/t39.30808-6/457692302_492508026900569_5196273676012787689_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WPJsuFZctXwQ7kNvgFCUW30&_nc_oc=AdhFGPTSmSWwXYoMcMhThSEGOwpHAmH3xCsuW3Du8ZsEqGrx597gh7kK2WjRKoZHCs-TPu2Cx0j33ZrWG1j7wIb2&_nc_zt=23&_nc_ht=scontent.fhph1-1.fna&_nc_gid=A3BQfHBMMk2PVBRb63Ek54D&oh=00_AYCDqEIKXvVgdE68LIOJLFQlQ9nE6eXEmlZcSxGhs-mQbA&oe=67B5AA06"
+                >Năm 2024</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/476611407_607365565414814_4634102843958709347_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LAhQtilfmSsQ7kNvgG_NFhS&_nc_oc=AdhQ5sOKPhFQcsjp6N9SJhYmPOYLTPgH7vYY5FuV7IESc_8xLhgdKlVB2yLQSiP1cqU1lBmJ2lclzXsy8w8P1Ik8&_nc_zt=23&_nc_ht=scontent.fhph1-3.fna&_nc_gid=AnJH-af6J67ZTVg7H4OEbnS&oh=00_AYCZ6RZRubP9Ns9AMu1xtHsUK3-fiAYF7dQzMCXJg46-JQ&oe=67B580FC"
+                >Năm 2023</a
+              >
+            </li>
+            <li><a href="project-image.html">Năm 2022</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Bài Viết</a></li>
+        <li><a href="archives.html">Các Hoạt Động Tiêu Biểu</a></li>
+        <li><a href="contact.html">Liên Hệ</a></li>
+      </ul>
+      <!-- /.main_menu -->
+    </div>
+    <!-- /.responsive_menu -->
+
+    <header class="site-header clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-left logo">
+              <a href="index.html">
+                <img src="images/logo.png" />
+              </a>
+            </div>
+            <!-- /.logo -->
+
+            <div class="main-navigation pull-right">
+              <nav class="main-nav visible-md visible-lg">
+                <ul class="sf-menu">
+                  <li class="active"><a href="index.html">Trang Chủ</a></li>
+                  <li>
+                    <a href="#">Lịch Sử Thành Lập</a>
+                    <ul>
+                      <li><a href="portfolio.html">Lịch Sử Thành Lập</a></li>
+                      <li><a href="project-image.html">Chức Vụ</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Thành Viên</a>
+                    <ul>
+                      <li>
+                        <a
+                          href="https://scontent.fhph1-1.fna.fbcdn.net/v/t39.30808-6/457692302_492508026900569_5196273676012787689_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WPJsuFZctXwQ7kNvgFCUW30&_nc_oc=AdhFGPTSmSWwXYoMcMhThSEGOwpHAmH3xCsuW3Du8ZsEqGrx597gh7kK2WjRKoZHCs-TPu2Cx0j33ZrWG1j7wIb2&_nc_zt=23&_nc_ht=scontent.fhph1-1.fna&_nc_gid=A3BQfHBMMk2PVBRb63Ek54D&oh=00_AYCDqEIKXvVgdE68LIOJLFQlQ9nE6eXEmlZcSxGhs-mQbA&oe=67B5AA06"
+                          >Năm 2024</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/476611407_607365565414814_4634102843958709347_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LAhQtilfmSsQ7kNvgG_NFhS&_nc_oc=AdhQ5sOKPhFQcsjp6N9SJhYmPOYLTPgH7vYY5FuV7IESc_8xLhgdKlVB2yLQSiP1cqU1lBmJ2lclzXsy8w8P1Ik8&_nc_zt=23&_nc_ht=scontent.fhph1-3.fna&_nc_gid=AnJH-af6J67ZTVg7H4OEbnS&oh=00_AYCZ6RZRubP9Ns9AMu1xtHsUK3-fiAYF7dQzMCXJg46-JQ&oe=67B580FC"
+                          >Năm 2023</a
+                        >
+                      </li>
+                      <li><a href="project-image.html">Năm 2022</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="blog.html">Bài Viết</a></li>
+                  <li><a href="archives.html">Hoạt Động</a></li>
+                  <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+                <!-- /.sf-menu -->
+              </nav>
+              <!-- /.main-nav -->
+
+              <!-- This one in here is responsive menu for tablet and mobiles -->
+              <div class="responsive-navigation visible-sm visible-xs">
+                <a href="#nogo" class="menu-toggle-btn">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+              <!-- /responsive_navigation -->
+            </div>
+            <!-- /.main-navigation -->
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <!-- /.site-header -->
+
+    <section id="homeIntro" class="parallax first-widget">
+      <div class="parallax-overlay">
+        <div class="container home-intro-content">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>CLB Truyền thông CAL - THPT Mông Dương</h2>
+              <p style="font-family: Roboto Slab">
+                Chúng mình là nhịp cầu kết nối thông tin, lan tỏa giá trị tích cực và ghi dấu những khoảnh khắc đáng nhớ, góp phần xây dựng một môi
+                trường học đường năng động, sáng tạo và gắn kết.
+              </p>
+              <a href="#f" class="large-button white-color">Xuống Cuối<i class="icon-button fa fa-download"></i></a>
+            </div>
+            <!-- /.col-md-12 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.parallax-overlay -->
+    </section>
+    <!-- /#homeIntro -->
+
+    <section class="cta clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="cta-title"><strong>Bạn muốn thăm?</strong> Vào Trang FaceBook Của Chúng Mình</h4>
+            <a class="main-button accent-color" href="https://www.facebook.com/profile.php?id=100084241260212"
+              >FaceBook<i class="icon-button fa fa-arrow-right"></i
+            ></a>
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.cta -->
+    <div style="display: flex; justify-content: center">
+      <h1
+        style="
+          width: 500px;
+          text-align: center;
+          padding: 5px 10px;
+          background-color: #dd9d119f;
+          border-radius: 20px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 1.75);
+        "
+      >
+        Nhiệm vụ của Chúng Mình
+      </h1>
+    </div>
+
+    <section class="light-content services" style="font-family: Roboto Slab">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div class="service-box-wrap">
+              <div class="service-icon-wrap">
+                <i class="fa fa-umbrella fa-2x"></i>
+              </div>
+              <!-- /.service-icon-wrap -->
+              <div class="service-cnt-wrap">
+                <h3 class="service-title">Ghi nhận sự kiện</h3>
+                <p>Đánh dấu và ghi lại các sự kiện, giải thưởng, hoạt động quan trọng của trường.</p>
+              </div>
+              <!-- /.service-cnt-wrap -->
+            </div>
+            <!-- /.service-box-wrap -->
+          </div>
+          <!-- /.col-md-4 -->
+
+          <div class="col-md-4 col-sm-4">
+            <div class="service-box-wrap">
+              <div class="service-icon-wrap">
+                <i class="fa fa-mobile-phone fa-2x"></i>
+              </div>
+              <!-- /.service-icon-wrap -->
+              <div class="service-cnt-wrap">
+                <h3 class="service-title">Cập nhật tin tức</h3>
+                <p>Cập nhật những hoạt động thường ngày của cán bộ, giáo viên, nhân viên.</p>
+              </div>
+              <!-- /.service-cnt-wrap -->
+            </div>
+            <!-- /.service-box-wrap -->
+          </div>
+          <!-- /.col-md-4 -->
+
+          <div class="col-md-4 col-sm-4">
+            <div class="service-box-wrap">
+              <div class="service-icon-wrap">
+                <i class="fa fa-pencil-square-o fa-2x"></i>
+              </div>
+              <!-- /.service-icon-wrap -->
+              <div class="service-cnt-wrap">
+                <h3 class="service-title">Sản xuất nội dung</h3>
+                <p>Thực hiện các video, phóng sự, phỏng vấn thú vị về hoạt động của nhà trường.</p>
+              </div>
+              <!-- /.service-cnt-wrap -->
+            </div>
+            <!-- /.service-box-wrap -->
+          </div>
+          <!-- /.col-md-4 -->
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div class="service-box-wrap">
+              <div class="service-icon-wrap">
+                <i class="fa fa-code fa-2x"></i>
+              </div>
+              <!-- /.service-icon-wrap -->
+              <div class="service-cnt-wrap">
+                <h3 class="service-title">Cung cấp thông tin</h3>
+                <p>Cung cấp thông tin xác thực cho học sinh đang học, đã học và có mong muốn học tại trường.</p>
+              </div>
+              <!-- /.service-cnt-wrap -->
+            </div>
+            <!-- /.service-box-wrap -->
+          </div>
+          <!-- /.col-md-4 -->
+
+          <div class="col-md-4 col-sm-4">
+            <div class="service-box-wrap">
+              <div class="service-icon-wrap">
+                <i class="fa fa-eye-slash fa-2x"></i>
+              </div>
+              <!-- /.service-icon-wrap -->
+              <div class="service-cnt-wrap">
+                <h3 class="service-title">Quảng bá hình ảnh</h3>
+                <p>Quảng bá hình ảnh, thành tựu và hoạt động nổi bật của nhà trường đến cộng đồng.</p>
+              </div>
+              <!-- /.service-cnt-wrap -->
+            </div>
+            <!-- /.service-box-wrap -->
+          </div>
+          <!-- /.col-md-4 -->
+
+          <div class="col-md-4 col-sm-4">
+            <div class="service-box-wrap">
+              <div class="service-icon-wrap">
+                <i class="fa fa-suitcase fa-2x"></i>
+              </div>
+              <!-- /.service-icon-wrap -->
+              <div class="service-cnt-wrap">
+                <h3 class="service-title">Phát triển kỹ năng</h3>
+                <p>
+                  Tạo sân chơi sáng tạo cho học sinh yêu thích truyền thông, giúp các bạn phát triển kỹ năng quay dựng, viết lách và tổ chức sự kiện.
+                </p>
+              </div>
+              <!-- /.service-cnt-wrap -->
+            </div>
+            <!-- /.service-box-wrap -->
+          </div>
+          <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.services -->
+
+    <section class="dark-content portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header">
+              <h2 class="section-title">Một Số Hoạt Động Của Chúng Mình</h2>
+              <p class="section-desc" style="font-family: Roboto Slab">Những hình ảnh chân thực, sống động và chi tiết nhất!</p>
+            </div>
+            <!-- /.section-header -->
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+
+      <div id="portfolio-carousel" class="portfolio-carousel portfolio-holder" style="font-family: Roboto Slab">
+        <div class="item">
+          <div class="thumb-post">
+            <div class="overlay">
+              <div class="overlay-inner">
+                <div class="portfolio-infos">
+                  <span class="meta-category">Kỹ Thuật</span>
+                  <h3 class="portfolio-title"><a href="project-slideshow.html">Quay & dựng video</a></h3>
+                </div>
+                <div class="portfolio-expand">
+                  <a class="fancybox" href="images/includes/quay phim.jpg" title="Quay & dựng video">
+                    <i class="fa fa-expand"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="images/includes/quay phim.jpg" />
+          </div>
+        </div>
+        <!-- /.item -->
+        <div class="item">
+          <div class="thumb-post">
+            <div class="overlay">
+              <div class="overlay-inner">
+                <div class="portfolio-infos">
+                  <span class="meta-category">Hình Ảnh</span>
+                  <h3 class="portfolio-title"><a href="project-slideshow.html">Chụp ảnh sự kiện</a></h3>
+                </div>
+                <div class="portfolio-expand">
+                  <a class="fancybox" href="images/background2.jpg" title="Chụp ảnh sự kiện">
+                    <i class="fa fa-expand"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="images/background2.jpg" alt="Chụp ảnh sự kiện" />
+          </div>
+        </div>
+        <!-- /.item -->
+        <div class="item">
+          <div class="thumb-post">
+            <div class="overlay">
+              <div class="overlay-inner">
+                <div class="portfolio-infos">
+                  <span class="meta-category">Nội Dung</span>
+                  <h3 class="portfolio-title"><a href="project-slideshow.html">Viết bài truyền thông</a></h3>
+                </div>
+                <div class="portfolio-expand">
+                  <a class="fancybox" href="images/includes/viết bài.jpg" title="Viết bài truyền thông">
+                    <i class="fa fa-expand"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="images/includes/viết bài.jpg" alt="Viết bài truyền thông" />
+          </div>
+        </div>
+        <!-- /.item -->
+        <div class="item">
+          <div class="thumb-post">
+            <div class="overlay">
+              <div class="overlay-inner">
+                <div class="portfolio-infos">
+                  <span class="meta-category">Sự kiện</span>
+                  <h3 class="portfolio-title"><a href="project-slideshow.html">Tổ chức & hỗ trợ sự kiện</a></h3>
+                </div>
+                <div class="portfolio-expand">
+                  <a class="fancybox" href="images/includes/kỷ yếu.jpg" title="Tổ chức & hỗ trợ sự kiện">
+                    <i class="fa fa-expand"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="images/includes/kỷ yếu.jpg" alt="Tổ chức & hỗ trợ sự kiện" />
+          </div>
+        </div>
+        <!-- /.item -->
+        <div class="item">
+          <div class="thumb-post">
+            <div class="overlay">
+              <div class="overlay-inner">
+                <div class="portfolio-infos">
+                  <span class="meta-category">Thiết kế</span>
+                  <h3 class="portfolio-title"><a href="project-slideshow.html">Thiết kế ấn phẩm truyền thông</a></h3>
+                </div>
+                <div class="portfolio-expand">
+                  <a class="fancybox" href="images/includes/thiết kế.png" title="Thiết kế ấn phẩm truyền thông">
+                    <i class="fa fa-expand"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="images/includes/thiết kế.png" alt="Thiết kế ấn phẩm truyền thông" />
+          </div>
+        </div>
+        <!-- /.item -->
+        <div class="item">
+          <div class="thumb-post">
+            <div class="overlay">
+              <div class="overlay-inner">
+                <div class="portfolio-infos">
+                  <span class="meta-category">Fanpage</span>
+                  <h3 class="portfolio-title"><a href="project-slideshow.html">Quản lý fanpage & kênh truyền thông</a></h3>
+                </div>
+                <div class="portfolio-expand">
+                  <a class="fancybox" href="images/includes/trang face.png" title="Quản lý fanpage & kênh truyền thông">
+                    <i class="fa fa-expand"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="images/includes/trang face.png" alt="Quản lý fanpage & kênh truyền thông" />
+          </div>
+        </div>
+        <!-- /.item -->
+        <div class="item">
+          <div class="thumb-post">
+            <div class="overlay">
+              <div class="overlay-inner">
+                <div class="portfolio-infos">
+                  <span class="meta-category">Đào Tạo</span>
+                  <h3 class="portfolio-title"><a href="project-slideshow.html">Đào tạo & phát triển kỹ năng</a></h3>
+                </div>
+                <div class="portfolio-expand">
+                  <a class="fancybox" href="images/includes/hỗ trợ.jpg" title="Đào tạo & phát triển kỹ năng">
+                    <i class="fa fa-expand"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="images/includes/hỗ trợ.jpg" alt="Đào tạo & phát triển kỹ năng" />
+          </div>
+        </div>
+        <!-- /.item -->
+      </div>
+      <!-- /#owl-demo -->
+    </section>
+    <!-- /.portfolio-holder -->
+
+    <section class="testimonials-widget" style="font-size: 35px">
+      <div class="container" style="font-family: Qwigley">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bxslider">
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <span class="testimonial-author">Châm Ngôn của CAL</span>
+                  <p class="testimonial-description" style="font-size: 30px">
+                    "Mỗi khoảnh khắc được ghi lại là một dấu mốc trong hành trình sáng tạo – và CLB Truyền thông CAL chính là người kể lại những câu
+                    chuyện ấy."
+                  </p>
+                </div>
+              </div>
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <span class="testimonial-author">Châm Ngôn của CAL</span>
+                  <p class="testimonial-description" style="font-size: 30px">
+                    "Qua từng video, phóng sự và phỏng vấn, chúng tôi không chỉ truyền tải thông tin mà còn lan tỏa đam mê, kết nối cộng đồng và khơi
+                    dậy cảm hứng."
+                  </p>
+                </div>
+              </div>
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <span class="testimonial-author">Châm Ngôn của CAL</span>
+                  <p class="testimonial-description" style="font-size: 30px">
+                    "Hãy cùng nhau ghi dấu ấn cho mỗi sự kiện, mỗi thành tựu của trường, để niềm tự hào và tinh thần sáng tạo mãi trường tồn."
+                  </p>
+                </div>
+              </div>
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <span class="testimonial-author">Châm Ngôn của CAL</span>
+                  <p class="testimonial-description" style="font-size: 30px">
+                    "CLB Truyền thông CAL - THPT Mông Dương: Nơi ghi chép quá khứ, khẳng định hiện tại và kiến tạo tương lai cho một ngôi trường đầy
+                    nhiệt huyết và đổi mới."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- /.bxslider -->
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.testimonials-widget -->
+
+    <section class="light-content our-team">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header">
+              <h2 class="section-title">Các dịch vụ của chúng mình</h2>
+              <p class="section-desc" style="font-family: Roboto Slab">
+                Hỗ trợ các dịch vụ truyền thông <br />Thúc đẩy, nâng cao và quảng bá độ nhận diện
+              </p>
+            </div>
+            <!-- /.section-header -->
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <div class="team-members">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-4">
+              <div class="team-member">
+                <div class="thumb-post">
+                  <img src="images/includes/member1.png" alt="" />
+                  <span class="member-role">Nội dung</span>
+                </div>
+                <div class="member-content">
+                  <h4 class="member-name">Sản xuất nội dung truyền thông</h4>
+                  <p style="font-family: Roboto Slab; text-align: justify">
+                    Quay, dựng video, chụp ảnh, viết bài truyền thông cho các sự kiện, hoạt động của trường.
+                  </p>
+                </div>
+              </div>
+              <!-- /.team-member -->
+            </div>
+            <!-- /.col-md-4 -->
+
+            <div class="col-md-4 col-sm-4">
+              <div class="team-member">
+                <div class="thumb-post">
+                  <img src="images/includes/member2.jpg" alt="" />
+                  <span class="member-role">Sự kiện</span>
+                </div>
+                <div class="member-content">
+                  <h4 class="member-name">Tổ chức sự kiện & hỗ trợ truyền thông</h4>
+                  <p style="font-family: Roboto Slab; text-align: justify">
+                    Hỗ trợ quảng bá, đưa tin và ghi lại dấu ấn của các sự kiện quan trọng trong trường.
+                  </p>
+                </div>
+              </div>
+              <!-- /.team-member -->
+            </div>
+            <!-- /.col-md-4 -->
+
+            <div class="col-md-4 col-sm-4">
+              <div class="team-member">
+                <div class="thumb-post">
+                  <img src="images/includes/member3.jpg" alt="" />
+                  <span class="member-role">Sáng Tạo</span>
+                </div>
+                <div class="member-content">
+                  <h4 class="member-name">Thiết kế & sáng tạo</h4>
+                  <p style="font-family: Roboto Slab; text-align: justify">
+                    Thiết kế poster, banner, ấn phẩm truyền thông giúp nâng cao hình ảnh và nhận diện thương hiệu của trường.
+                  </p>
+                </div>
+              </div>
+              <!-- /.team-member -->
+            </div>
+            <!-- /.col-md-4 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.team-members -->
+    </section>
+    <!-- /.our-team -->
+
+    <section id="blogPosts" class="parallax">
+      <div class="parallax-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header">
+                <h2 class="section-title">Các CLB đối tác của chúng mình!</h2>
+                <p class="section-desc" style="font-family: Roboto Slab">Hỗ trợ và hợp tác trong các hoạt động truyền thông</p>
+              </div>
+              <!-- /.section-header -->
+            </div>
+            <!-- /.col-md-12 -->
+          </div>
+          <!-- /.row -->
+          <div class="row latest-posts">
+            <div class="col-md-4 col-sm-6">
+              <div class="blog-post clearfix">
+                <div class="thumb-post">
+                  <a href="https://www.facebook.com/NGMDteam"><img src="images/includes/CLB nhảy.jpg" alt="" class="img-circle" /></a>
+                </div>
+                <div class="blog-post-content">
+                  <h4 class="post-title"><a href="https://www.facebook.com/NGMDteam">NGMD - New Generation - CLB Nhảy THPT Mông Dương</a></h4>
+                </div>
+              </div>
+              <!-- /.blog-post -->
+            </div>
+            <!-- /.col-md-4 -->
+
+            <!-- /.col-md-4 -->
+            <div class="col-md-4 col-sm-6">
+              <div class="blog-post clearfix">
+                <div class="thumb-post">
+                  <a href="https://www.facebook.com/mscmd2025"><img src="images/includes/CLB nhạc.jpg" alt="" class="img-circle" /></a>
+                </div>
+                <div class="blog-post-content">
+                  <h4 class="post-title"><a href="https://www.facebook.com/mscmd2025">CLB Âm Nhạc MSC - THPT Mông Dương</a></h4>
+                </div>
+              </div>
+              <!-- /.blog-post -->
+            </div>
+            <!-- /.col-md-4 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.parallax-overlay -->
+    </section>
+    <!-- /#blogPosts -->
+
+    <footer id="f" class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="footer-nav clearfix">
+              <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Lịch Sử</a></li>
+                <li><a href="blog.html">Thành Viên</a></li>
+                <li><a href="archives.html">Hoạt Động</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+              </ul>
+              <!-- /.footer-menu -->
+            </nav>
+            <!-- /.footer-nav -->
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-md-12">
+            <p class="copyright-text">Copyright &copy; 2025 CLB Truyền thông CAL - THPT Mông Dương | Design: Apo Team</p>
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- /.site-footer -->
+
+    <!-- Scripts -->
+    <script src="js/min/plugins.min.js"></script>
+    <script src="js/min/medigo-custom.min.js"></script>
+  </body>
+</html>
