@@ -492,7 +492,7 @@ input.mainBtn {
 }
 
 #homeIntro {
-  background-image: url("/images/background2.jpg");
+  background-image: url("../images/background2.jpg");
 }
 
 #portfolio {
